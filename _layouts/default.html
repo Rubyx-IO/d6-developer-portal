@@ -25,7 +25,6 @@
         
       </header>
       
-       {% include toc.html html=content %}
 
       <section>
 
@@ -33,6 +32,9 @@
 
       </section>
       <footer>
+        
+        {% include toc.html html=content %}
+
         {% if site.github.is_project_page %}
         <p>This page is maintained by <a href="https://rubyx.io"> Rubyx </a></p>
         {% endif %}
