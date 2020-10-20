@@ -160,7 +160,19 @@ if __name__ == "__main__":
 ```
 
 ### Data Model
+Get table schema
 
+https://googleapis.dev/python/bigquery/latest/reference.html#table
+
+```python
+client = bigquery.Client()
+table_scheme = client.table.Table(table_ref[, schema])
+
+```    
+```
+curl --location --request GET 'https://bigquery.googleapis.com/bigquery/v2/projects/[projectID]/datasets/dwh/tables/loan' \
+--header 'Authorization: Bearer [BEARER TOKEN]'
+```
 Link to spreadsheet.
 
 ### Support or Contact
