@@ -67,7 +67,7 @@ However, Google Cloud Client Libraries are the recommended option for accessing 
 
 It is possible to request the API via other languages for which ad hoc packages are available, e.g. [bigQueryR](https://code.markedmondson.me/bigQueryR/) or [bigrquery](https://bigrquery.r-dbi.org/) for `R`. 
 
-In the example below we will present an example of a query using the Python Client. Tutorials for other languages are available [here](https://cloud.google.com/bigquery/docs/quickstarts/quickstart-client-libraries#client-libraries-install-python).
+In this documentation, we only present an example of a query using the Python Client. Tutorials for other languages are available [here](https://cloud.google.com/bigquery/docs/quickstarts/quickstart-client-libraries#client-libraries-install-python).
 
 *Install the client library*
 
@@ -88,6 +88,22 @@ client = bigquery.Client()
 ```
 
 #### SQL query
+
+Queries are written in SQL using standard SQL syntax, which is described in the [query reference guide](https://cloud.google.com/bigquery/docs/reference/standard-sql/enabling-standard-sql).
+
+```sql
+SELECT
+  CONCAT(
+    'https://stackoverflow.com/questions/',
+    CAST(id as STRING)) as url,
+  view_count
+FROM `bigquery-public-data.stackoverflow.posts_questions`
+WHERE tags like '%google-bigquery%'
+ORDER BY view_count DESC
+LIMIT 10
+```
+
+
 #### Example
 
 
