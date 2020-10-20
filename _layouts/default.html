@@ -22,12 +22,12 @@
         <h2><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h2>
         
         <p>{{ site.description | default: site.github.project_tagline }}</p>
-
+        
+         <p>
+         {% include toc.html html=content %}
+         </p>
+        
       </header>
-      
-      <section>
-      {% include toc.html html=content %}
-      </section>
       
       <section>
 
