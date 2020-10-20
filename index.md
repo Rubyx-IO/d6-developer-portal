@@ -27,25 +27,44 @@ Your `ProjectID` will have been given to you personally and usually corresponds 
 | scoring | Description     | 
 | WAD | Description     | 
 
-```markdown
-Syntax highlighted code block
+For example to query the loan table, you must use the id `projectID.dwh.loan`.
 
-# Header 1
-## Header 2
-### Header 3
+### API request
 
-- Bulleted
-- List
+The section below summarizes the elements described on the Google's webpage: [Quickstart: Using client libraries page](https://cloud.google.com/bigquery/docs/quickstarts/quickstart-client-libraries#client-libraries-install-python).
 
-1. Numbered
-2. List
+#### Authentication
 
-**Bold** and _Italic_ and `Code` text
+Authentication to request the BigQuery API is done via a service account. A service account is a special kind of account used by an application or a virtual machine (VM) instance, not a person. Service accounts are associated with private/public RSA key-pairs that are used for authentication to Google.
 
-[Link](url) and ![Image](src)
+In practice, a json file containing the private key of your account service will have been provided to you. Be careful, whoever is in possession of this key is able to request the data from the warehouse. Keep it safe. If there is any doubt about a security breach, please contact Rubyx support. We will generate a new key and make the previous one invalid.
+
+To authenticate yourself, set the environment variable `GOOGLE_APPLICATION_CREDENTIALS` to the path of the JSON file that contains your service account key. This variable only applies to your current shell session, so if you open a new session, set the variable again. 
+
+*Example: Linux or macOS*
+
+Replace [PATH] with the path of the JSON file that contains your service account key. 
+
+```
+export GOOGLE_APPLICATION_CREDENTIALS="[PATH]" 
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+*Example: Linux or Windows*
+
+```
+set GOOGLE_APPLICATION_CREDENTIALS=[PATH]
+```
+ 
+
+#### SQL query
+#### Example
+
+
+
+### Support and Contact
+
+Having trouble with the API? [contact support](xxx) and we’ll help you sort it out.
+
 
 ### Jekyll Themes
 
