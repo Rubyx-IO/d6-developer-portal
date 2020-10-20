@@ -21,7 +21,9 @@
         
         <h2><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h2>
         
+        <section>
         {% include toc.html html=content %}
+        </section>
         
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
