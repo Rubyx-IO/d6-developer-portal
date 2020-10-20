@@ -91,18 +91,37 @@ client = bigquery.Client()
 
 Queries are written in SQL using standard SQL syntax, which is described in the [query reference guide](https://cloud.google.com/bigquery/docs/reference/standard-sql/enabling-standard-sql).
 
+The following query returns the Id's of the ten customers with the largest due amount for the date of October 15, 2020 (do not forget to replace the value of `projectID`).
+
 ```sql
-SELECT
-  CONCAT(
-    'https://stackoverflow.com/questions/',
-    CAST(id as STRING)) as url,
-  view_count
-FROM `bigquery-public-data.stackoverflow.posts_questions`
-WHERE tags like '%google-bigquery%'
-ORDER BY view_count DESC
+SELECT Customer_ID, Amount_Due 
+FROM `projectID.dwh.schedule` 
+WHERE Payment_Due_Date = '2020-10-15T00:00:00' 
+ORDER BY Amount_Due DESC 
 LIMIT 10
 ```
 
+*Running the query*
+
+```python
+query_job = client.query(
+    """
+    SELECT Customer_ID, Amount_Due 
+    FROM `projectID.dwh.schedule` 
+    WHERE Payment_Due_Date = '2020-10-15T00:00:00' 
+    ORDER BY Amount_Due DESC 
+    LIMIT 10"""
+)
+
+results = query_job.result()  # Waits for job to complete.
+```
+
+*Displaying the query result*
+
+```python
+for row in results:
+    print("{} : {} views".format(row.Customer_ID, row.Amount_Due))
+```
 
 #### Example
 
