@@ -1,16 +1,16 @@
-## Welcome to the Rubyx D6 data warehouse developer portal
+## Welcome to the Rubyx D6 Warehouse developer portal
 
-This page provides the documentation to query data tables from the D6 Data Warehouse maintained by Rubyx. 
+This page provides the documentation to query data tables from the D6 Warehouse powered by Rubyx. 
 
 The document is divided into three parts. The first part informs about the structure of the data warehouse. The second section explains API authentication steps and how to use of the BigQuery API clients to make a query. The last one informs about the data model of the warehouse and provides some examples of queries to be performed.
 
-### D6 Data Warehouse architecture
+### D6 Warehouse architecture
 
-The D6 Data Warehouse is hosted by Google Cloud Platform (GCP) and leverage its serverless, highly scalable, and cost-effective multi-cloud data warehouse called BigQuery. 
+The D6 Warehouse is hosted by Google Cloud Platform (GCP) and leverage its serverless, highly scalable, and cost-effective multi-cloud data warehouse called BigQuery. 
 
 GCP is organized in projects. Each project encloses BigQuery datasets containing one or more tables where data is stored. The projects, dataset and table all have an associated ID. This combination `projectID.datasetID.tableID` allows queries to be made on the right table.
 
-Your `projectID` will have been given to you personally and usually corresponds to the name of your institution (e.g. `bank-of-demo`). The `datasetID` of the D6 Data Warehouse is `dwh`. Each table in the warehouse has a different ID. The list is given below for reference:
+Your `projectID` will have been given to you personally and usually corresponds to the name of your institution (e.g. `bank-of-demo`). The `datasetID` of the D6 Warehouse is `dwh`. Each table in the warehouse has a different ID. The list is given below for reference:
 
 | TableID        | Description           |
 | ------------- |:-------------:| 
