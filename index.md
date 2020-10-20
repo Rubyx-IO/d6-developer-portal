@@ -1,4 +1,4 @@
-# Welcome to the Rubyx D6 Warehouse developer portal
+## Welcome to the Rubyx D6 Warehouse developer portal
 
 This page provides the documentation to query data tables from the D6 Warehouse powered by Rubyx. 
 
