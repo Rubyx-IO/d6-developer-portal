@@ -39,6 +39,8 @@ Authentication to request the BigQuery API is done via a service account. A serv
 
 In practice, a json file containing the private key of your account service will have been provided to you. Be careful, whoever is in possession of this key is able to request the data from the warehouse. Keep it safe. If there is any doubt about a security breach, please contact Rubyx support. We will generate a new key and make the previous one invalid.
 
+Note that this service account only has permission to request `dwh` tables in your project. It does not have access to any other tables in any other projects and can only read data, not write.
+
 To authenticate yourself, set the environment variable `GOOGLE_APPLICATION_CREDENTIALS` to the path of the JSON file that contains your service account key. This variable only applies to your current shell session, so if you open a new session, set the variable again. 
 
 *Example: Linux or macOS*
@@ -151,7 +153,8 @@ if __name__ == "__main__":
 
 ### Data Model
 
+Link to spreadsheet.
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Having trouble with using the API? [Contact support](xxx) and we’ll help you sort it out.
