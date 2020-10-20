@@ -8,8 +8,24 @@ The document is divided into three parts. The first part informs about the struc
 
 The D6 Data Warehouse is hosted by Google Cloud Platform (GCP) and leverage its serverless, highly scalable, and cost-effective multi-cloud data warehouse called BigQuery. 
 
-GCP is organized in projects. Each project encloses BigQuery datasets containing one or more tables where data is stored. The projects, dataset and table all have an associated ID. This combination `ProjectID.DatasetID.TableID`{:.bash} allows queries to be made on the right table.
+GCP is organized in projects. Each project encloses BigQuery datasets containing one or more tables where data is stored. The projects, dataset and table all have an associated ID. This combination `ProjectID.DatasetID.TableID` allows queries to be made on the right table.
 
+Your `ProjectID` will have been given to you personally and usually corresponds to the name of your institution (e.g. `bank-of-demo`). The `datasetID` of the D6 Data Warehouse is `dwh`. Each table in the warehouse has a different ID. The list is given below.
+
+| TableID        | Description           |
+| ------------- |:-------------:| 
+| customer     | Description | 
+| dictionary     | Description      | 
+| eligible | Description     | 
+| event | Description      | 
+| hierarchy  | Description     | 
+| loan  | Description      | 
+| loan_application_core  | Description     | 
+| loan_balance | Description     | 
+| objective | Description     | 
+| schedule | Description      | 
+| scoring | Description     | 
+| WAD | Description     | 
 
 ```markdown
 Syntax highlighted code block
