@@ -134,7 +134,7 @@ for row in results:
 ```
 
 #### Complete source code
-Here is the complete source code for the sample. Replace `projectID` with hte ID of your project to test the function.
+Here is the complete source code for the sample. Replace `projectID` with the ID of your project to be able to test the function.
 
 ```python
 from google.cloud import bigquery
