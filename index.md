@@ -33,21 +33,19 @@ For example to query the loan table, you should use the id `projectID.dwh.loan`.
 
 Most of the following section is taken from Google's documentation described on the Google's webpage [Quickstart: Using client libraries page](https://cloud.google.com/bigquery/docs/quickstarts/quickstart-client-libraries).
 
-While you can use Google Cloud APIs by making direct HTTP requests to the server (or RPC calls where available), Google provides client library code for all Cloud APIs that makes it easier to access them from your favorite languages. 
+All Google Cloud APIs expose a simple traditional JSON/REST interface. If you need to write your own custom code to directly access the REST API using a third-party HTTP client library of your choice, you can find out more about how Cloud APIs work with different HTTP versions and implementations in [Google HTTP Guidelines](https://cloud.google.com/apis/docs/http) and the [REST reference for BigQuery](https://cloud.google.com/bigquery/docs/reference/rest).
 
-All Cloud APIs expose a simple traditional JSON/REST interface. If you need to write your own custom code to directly access the REST API using a third-party HTTP client library of your choice, you can find out more about how Cloud APIs work with different HTTP versions and implementations in [Google HTTP Guidelines](https://cloud.google.com/apis/docs/http) and the [REST reference for BigQuery](https://cloud.google.com/bigquery/docs/reference/rest).
+While you can use Google Cloud APIs by making direct HTTP requests to the server (or RPC calls where available), Google Cloud Client Libraries are the recommended option for accessing Cloud APIs programmatically from your favorite languages. Google BigQuery Client Libraries are available for the following languages: `C#`, `Go`, `Java`, `Node.js`, `PHP`, `Python`, `Ruby`.
 
-However, Google Cloud Client Libraries are the recommended option for accessing Cloud APIs programmatically. Google BigQuery Client Libraries are available for the following languages: `C#`, `Go`, `Java`, `Node.js`, `PHP`, `Python`, `Ruby`.
+Note that it is still possible to request the API through other languages for which ad hoc packages are available, e.g. [bigQueryR](https://code.markedmondson.me/bigQueryR/) or [bigrquery](https://bigrquery.r-dbi.org/) for `R`. 
 
-It is still possible to request the API via other languages for which ad hoc packages are available, e.g. [bigQueryR](https://code.markedmondson.me/bigQueryR/) or [bigrquery](https://bigrquery.r-dbi.org/) for `R`. 
-
-In this documentation, we only present an example of an API call using the Python Client. Tutorials for other languages are available [here](https://cloud.google.com/bigquery/docs/quickstarts/quickstart-client-libraries#client-libraries-install-python).
+In this documentation, we only present the steps to request the API using the Python Client. But tutorials for other languages are available [here](https://cloud.google.com/bigquery/docs/quickstarts/quickstart-client-libraries#client-libraries-install-python).
 
 #### Authentication
 
 Authentication to request the BigQuery API is done via a service account. A service account is a special kind of account used by an application or a virtual machine (VM) instance, not a person. Service accounts are associated with private/public RSA key-pairs that are used for authentication to Google.
 
-In practice, a json file containing the private key of your account service will have been provided to you. Be careful, whoever is in possession of this key is able to request the data from your data warehouse. Keep it safe. If there is any doubt about a security breach, please contact Rubyx support. We will generate a new key and make the previous one invalid.
+In practice, a json file containing the private key of your account service will have been provided to you. Be careful, whoever is in possession of this key is able to request the data from your data warehouse. It is therefore essential that you keep it safe. If there is any doubt about a security breach, please contact Rubyx support. We will generate a new key and make the previous one invalid.
 
 Note that this service account only has permission to request `dwh` tables in your project. It does not have access to any other tables in any other projects and can only read data, not write.
 
@@ -101,7 +99,7 @@ client = bigquery.Client()
 
 Queries are written in SQL using standard SQL syntax, which is described in the [query reference guide](https://cloud.google.com/bigquery/docs/reference/standard-sql/enabling-standard-sql).
 
-The following query returns, from the schedule table, the Id's of the 10 customers with the largest due amount for the date of October 15, 2020.
+The following query returns, from the schedule table, the ID's of the 10 customers with the largest due amount for the date of October 15, 2020.
 
 ```sql
 SELECT Customer_ID, Amount_Due 
