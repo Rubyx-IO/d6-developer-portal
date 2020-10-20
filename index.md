@@ -1,12 +1,15 @@
-## Welcome to GitHub Pages
+## Welcome to the Rubyx D6 data warehouse developer portal.
 
-You can use the [editor on GitHub](https://github.com/Rubyx-IO/d6-developer-portal/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This page contains all the information needed to query the databases in the D6 Data Warehouse maintained by Rubyx. These queries are done through the use of the Google BigQuery API. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The document is divided into three parts. The first part informs about the structure of the data warehouse. The second section is about API authentication and the use of the BIgQuery API clients to make a query. The last one informs about the data model of the data warehouse tables and gives some examples of queries to be performed.
 
-### Markdown
+### D6 Data Warehouse architecture
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The D6 Data Warehouse is hosted by Google Cloud Platform (GCP) and leverage its serverless, highly scalable, and cost-effective multi-cloud data warehouse called BigQuery. 
+
+GCP is organized in projects. Each project encloses BigQuery datasets containing one or more tables where data is stored. The projects, dataset and table all have an associated ID. This combination `ProjectID.DatasetID.TableID`{:.bash} allows queries to be made on the right table.
+
 
 ```markdown
 Syntax highlighted code block
