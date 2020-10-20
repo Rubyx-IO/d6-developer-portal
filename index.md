@@ -63,8 +63,29 @@ While you can use Google Cloud APIs by making direct HTTP requests to the server
 
 All Cloud APIs expose a simple traditional JSON/REST interface. If you need to write your own custom code to directly access the REST API using a third-party HTTP client library of your choice, you can find out more about how Cloud APIs work with different HTTP versions and implementations in [Google HTTP Guidelines](https://cloud.google.com/apis/docs/http) and the [REST reference for BigQuery](https://cloud.google.com/bigquery/docs/reference/rest).
 
-However, Google Cloud Client Libraries are the recommended option for accessing Cloud APIs programmatically. Google BigQuery Client Libraries are available for the following languages: C#, Go, Java, Node.js, PHP, Python, Ruby.
+However, Google Cloud Client Libraries are the recommended option for accessing Cloud APIs programmatically. Google BigQuery Client Libraries are available for the following languages: `C#`, `Go`, `Java`, `Node.js`, `PHP`, `Python`, `Ruby`.
 
+It is possible to request the API via other languages for which ad hoc packages are available, e.g. [bigQueryR](https://code.markedmondson.me/bigQueryR/) or [bigrquery](https://bigrquery.r-dbi.org/) for `R`. 
+
+In the example below we will present an example of a query using the Python Client. Tutorials for other languages are available [here](https://cloud.google.com/bigquery/docs/quickstarts/quickstart-client-libraries#client-libraries-install-python).
+
+*Install the client library*
+
+```python
+pip install --upgrade google-cloud-bigquery
+```
+
+*Import the libraries*
+
+```python
+from google.cloud import bigquery
+```
+
+*Initialize a BigQuery client*
+
+```python
+client = bigquery.Client()
+```
 
 #### SQL query
 #### Example
