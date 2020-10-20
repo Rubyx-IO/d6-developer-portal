@@ -69,7 +69,7 @@ Replace `[PATH]` with the path of the JSON file that contains your service accou
 set GOOGLE_APPLICATION_CREDENTIALS=[PATH]
 ```
 
-*For HTTP request: get beare token*
+*For HTTP request: get bearer token*
 
 To make HTTP requests, you will need a bearer token for authentication which can be obtained, after performing the previous commands, using the following Google Cloud SDK command (Google Cloud SDK can be installed following the instructions detailed [here](https://cloud.google.com/sdk/docs/install)):
 
@@ -101,7 +101,7 @@ client = bigquery.Client()
 
 Queries are written in SQL using standard SQL syntax, which is described in the [query reference guide](https://cloud.google.com/bigquery/docs/reference/standard-sql/enabling-standard-sql).
 
-The following query returns the Id's of the ten customers with the largest due amount for the date of October 15, 2020 (do not forget to replace the value of `projectID`).
+The following query returns, from the schedule table, the Id's of the ten customers with the largest due amount for the date of October 15, 2020 (do not forget to replace the value of `projectID`).
 
 ```sql
 SELECT Customer_ID, Amount_Due 
