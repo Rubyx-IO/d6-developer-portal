@@ -6,13 +6,13 @@ The document is divided into three parts. The first part informs about the struc
 
 ### D6 Warehouse architecture
 
-The D6 Warehouse is hosted by Google Cloud Platform (GCP) and leverage its serverless, highly scalable, and cost-effective multi-cloud data warehouse called BigQuery. 
+Rubyx D6 Warehouse is hosted by Google Cloud Platform (GCP) and leverage its serverless, highly scalable, and cost-effective multi-cloud data warehouse called BigQuery. 
 
-GCP is organized in projects. Each project encloses BigQuery datasets containing one or more tables where data is stored. The projects, dataset and table all have an associated ID. This combination `projectID.datasetID.tableID` allows queries to be made on the right table.
+GCP is organized in projects. Each project encloses BigQuery datasets containing one or more tables where data is stored. The projects, datasets and tables all have an associated ID. The combination `projectID.datasetID.tableID` allows queries to be made on the right table.
 
-Your `projectID` will have been given to you personally and usually corresponds to the name of your institution (e.g. `bank-of-demo`). The `datasetID` of the D6 Warehouse is `dwh`. Each table in the warehouse has a different ID. The list is given below for reference:
+Your `projectID` will have been provided to you directly and usually corresponds to the name of your institution (e.g. `bank-of-demo`). The `datasetID` of the D6 Warehouse is `dwh`. Each table in the warehouse has a different ID. The list is given below for reference:
 
-| TableID        | Description           |
+| `tableID`        | Description           |
 | ------------- |:-------------:| 
 | customer     | Description | 
 | dictionary     | Description      | 
@@ -39,15 +39,15 @@ All Cloud APIs expose a simple traditional JSON/REST interface. If you need to w
 
 However, Google Cloud Client Libraries are the recommended option for accessing Cloud APIs programmatically. Google BigQuery Client Libraries are available for the following languages: `C#`, `Go`, `Java`, `Node.js`, `PHP`, `Python`, `Ruby`.
 
-It is possible to request the API via other languages for which ad hoc packages are available, e.g. [bigQueryR](https://code.markedmondson.me/bigQueryR/) or [bigrquery](https://bigrquery.r-dbi.org/) for `R`. 
+It is still possible to request the API via other languages for which ad hoc packages are available, e.g. [bigQueryR](https://code.markedmondson.me/bigQueryR/) or [bigrquery](https://bigrquery.r-dbi.org/) for `R`. 
 
-In this documentation, we only present an example of a query using the Python Client. Tutorials for other languages are available [here](https://cloud.google.com/bigquery/docs/quickstarts/quickstart-client-libraries#client-libraries-install-python).
+In this documentation, we only present an example of an API call using the Python Client. Tutorials for other languages are available [here](https://cloud.google.com/bigquery/docs/quickstarts/quickstart-client-libraries#client-libraries-install-python).
 
 #### Authentication
 
 Authentication to request the BigQuery API is done via a service account. A service account is a special kind of account used by an application or a virtual machine (VM) instance, not a person. Service accounts are associated with private/public RSA key-pairs that are used for authentication to Google.
 
-In practice, a json file containing the private key of your account service will have been provided to you. Be careful, whoever is in possession of this key is able to request the data from the warehouse. Keep it safe. If there is any doubt about a security breach, please contact Rubyx support. We will generate a new key and make the previous one invalid.
+In practice, a json file containing the private key of your account service will have been provided to you. Be careful, whoever is in possession of this key is able to request the data from your data warehouse. Keep it safe. If there is any doubt about a security breach, please contact Rubyx support. We will generate a new key and make the previous one invalid.
 
 Note that this service account only has permission to request `dwh` tables in your project. It does not have access to any other tables in any other projects and can only read data, not write.
 
@@ -101,7 +101,7 @@ client = bigquery.Client()
 
 Queries are written in SQL using standard SQL syntax, which is described in the [query reference guide](https://cloud.google.com/bigquery/docs/reference/standard-sql/enabling-standard-sql).
 
-The following query returns, from the schedule table, the Id's of the ten customers with the largest due amount for the date of October 15, 2020 (do not forget to replace the value of `projectID`).
+The following query returns, from the schedule table, the Id's of the 10 customers with the largest due amount for the date of October 15, 2020.
 
 ```sql
 SELECT Customer_ID, Amount_Due 
@@ -134,7 +134,7 @@ for row in results:
 ```
 
 #### Complete source code
-Here is the complete source code for the sample.
+Here is the complete source code for the sample. Replace `projectID` with hte ID of your project to test the function.
 
 ```python
 from google.cloud import bigquery
