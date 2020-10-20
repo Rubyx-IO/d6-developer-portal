@@ -1,8 +1,8 @@
 ## Welcome to the Rubyx D6 data warehouse developer portal
 
-This page provides the necessary documentation to query the data from the D6 Data Warehouse maintained by Rubyx. 
+This page provides the documentation to query data tables from the D6 Data Warehouse maintained by Rubyx. 
 
-The document is divided into three parts. The first part informs about the structure of the data warehouse. The second section is about API authentication and the use of the BIgQuery API clients to make a query. The last one informs about the data model of the data warehouse tables and gives some examples of queries to be performed.
+The document is divided into three parts. The first part informs about the structure of the data warehouse. The second section explains API authentication steps and how to use of the BigQuery API clients to make a query. The last one informs about the data model of the warehouse and provides some examples of queries to be performed.
 
 ### D6 Data Warehouse architecture
 
