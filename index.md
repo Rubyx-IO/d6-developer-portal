@@ -31,7 +31,7 @@ For example to query the loan table, you should use the id `projectID.dwh.loan`.
 
 ### API request
 
-The section below summarizes the elements described on the Google's webpage: [Quickstart: Using client libraries page](https://cloud.google.com/bigquery/docs/quickstarts/quickstart-client-libraries#client-libraries-install-python).
+Most of the following section is taken from Google's documentation described on the Google's webpage [Quickstart: Using client libraries page](https://cloud.google.com/bigquery/docs/quickstarts/quickstart-client-libraries#client-libraries-install-python).
 
 #### Authentication
 
