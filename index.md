@@ -157,7 +157,7 @@ if __name__ == "__main__":
     query_d6_dwh()
 ```
 
-### Data Model
+### Data model
 Get table schema
 
 https://googleapis.dev/python/bigquery/latest/reference.html#table
@@ -173,6 +173,6 @@ curl --location --request GET 'https://bigquery.googleapis.com/bigquery/v2/proje
 ```
 Link to spreadsheet.
 
-### Support or Contact
+### Support
 
 Having trouble with using the API? [Contact support](xxx) and we’ll help you sort it out.
