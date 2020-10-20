@@ -123,8 +123,33 @@ for row in results:
     print("{} : {} views".format(row.Customer_ID, row.Amount_Due))
 ```
 
-#### Example
+#### Complete source code
+Here is the complete source code for the sample.
 
+```python
+from google.cloud import bigquery
+
+def query_d6_dwh():
+    client = bigquery.Client()
+    query_job = client.query(
+        """
+        SELECT Customer_ID, Amount_Due 
+        FROM `projectID.dwh.schedule` 
+        WHERE Payment_Due_Date = '2020-10-15T00:00:00' 
+        ORDER BY Amount_Due DESC 
+        LIMIT 10"""
+    )
+
+    results = query_job.result()  # Waits for job to complete.
+
+    for row in results:
+        print("{} : {} views".format(row.Customer_ID, row.Amount_Due))
+
+if __name__ == "__main__":
+    query_d6_dwh()
+```
+
+### Data Model
 
 
 ### Support or Contact
