@@ -51,6 +51,8 @@ export GOOGLE_APPLICATION_CREDENTIALS="[PATH]"
 
 *Example: Linux or Windows*
 
+Replace [PATH] with the path of the JSON file that contains your service account key. 
+
 ```
 set GOOGLE_APPLICATION_CREDENTIALS=[PATH]
 ```
@@ -60,15 +62,6 @@ set GOOGLE_APPLICATION_CREDENTIALS=[PATH]
 #### Example
 
 
-
-### Support and Contact
-
-Having trouble with the API? [contact support](xxx) and we’ll help you sort it out.
-
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Rubyx-IO/d6-developer-portal/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
 ### Support or Contact
 
