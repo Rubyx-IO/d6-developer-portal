@@ -59,6 +59,14 @@ Replace `[PATH]` with the path of the JSON file that contains your service accou
 set GOOGLE_APPLICATION_CREDENTIALS=[PATH]
 ```
 
+*For HTTP request: get beare token*
+
+To make HTTP requests, you will need a bearer token for authentication which can be obtained, after performing the previous commands, using the following Google Cloud SDK command (Google Cloud SDK can be installed following the instructions detailed [here](https://cloud.google.com/sdk/docs/install)):
+
+```
+gcloud auth application-default print-access-token
+```
+
 #### Setup client libraries
 
 While you can use Google Cloud APIs by making direct HTTP requests to the server (or RPC calls where available), Google provides client library code for all Cloud APIs that makes it easier to access them from your favorite languages. 
