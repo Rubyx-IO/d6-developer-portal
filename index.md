@@ -1,6 +1,6 @@
-## Welcome to the Rubyx D6 data warehouse developer portal.
+## Welcome to the Rubyx D6 data warehouse developer portal
 
-This page contains all the information needed to query the databases in the D6 Data Warehouse maintained by Rubyx. These queries are done through the use of the Google BigQuery API. 
+This page provides the necessary documentation to query the data from the D6 Data Warehouse maintained by Rubyx. 
 
 The document is divided into three parts. The first part informs about the structure of the data warehouse. The second section is about API authentication and the use of the BIgQuery API clients to make a query. The last one informs about the data model of the data warehouse tables and gives some examples of queries to be performed.
 
@@ -43,20 +43,28 @@ To authenticate yourself, set the environment variable `GOOGLE_APPLICATION_CREDE
 
 *Example: Linux or macOS*
 
-Replace [PATH] with the path of the JSON file that contains your service account key. 
+Replace `[PATH]` with the path of the JSON file that contains your service account key. 
 
 ```
 export GOOGLE_APPLICATION_CREDENTIALS="[PATH]" 
 ```
 
-*Example: Linux or Windows*
+*Example: Windows*
 
-Replace [PATH] with the path of the JSON file that contains your service account key. 
+Replace `[PATH]` with the path of the JSON file that contains your service account key. 
 
 ```
 set GOOGLE_APPLICATION_CREDENTIALS=[PATH]
 ```
- 
+
+#### Setup client libraries
+
+While you can use Google Cloud APIs by making direct HTTP requests to the server (or RPC calls where available), Google provides client library code for all Cloud APIs that makes it easier to access them from your favorite languages. 
+
+All Cloud APIs expose a simple traditional JSON/REST interface. If you need to write your own custom code to directly access the REST API using a third-party HTTP client library of your choice, you can find out more about how Cloud APIs work with different HTTP versions and implementations in [Google HTTP Guidelines](https://cloud.google.com/apis/docs/http) and the [REST reference for BigQuery](https://cloud.google.com/bigquery/docs/reference/rest).
+
+However, Google Cloud Client Libraries are the recommended option for accessing Cloud APIs programmatically. Google BigQuery Client Libraries are available for the following languages: C#, Go, Java, Node.js, PHP, Python, Ruby.
+
 
 #### SQL query
 #### Example
