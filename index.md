@@ -14,7 +14,7 @@ Your `projectID` will have been provided to you directly and usually corresponds
 
 | `tableID`        | Description           |
 | ------------- |:-------------:| 
-| customer     | Description | 
+| customer     | list of all customers with their core information | 
 | dictionary     | Description      | 
 | eligible | Description     | 
 | event | Description      | 
@@ -23,7 +23,7 @@ Your `projectID` will have been provided to you directly and usually corresponds
 | loan_application_core  | Description     | 
 | loan_balance | Description     | 
 | objective | Description     | 
-| schedule | Description      | 
+| schedule |  schedules related to a payment of any kind, including its modification (reschedules)      | 
 | scoring | Description     | 
 | WAD | Description     | 
 
