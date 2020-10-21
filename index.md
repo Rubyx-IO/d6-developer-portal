@@ -13,7 +13,7 @@ GCP is organized in projects. Each project encloses BigQuery datasets containing
 Your `projectID` will have been provided to you directly and usually corresponds to the name of your institution (e.g. `bank-of-demo`). The `datasetID` of the D6 Warehouse is `dwh`. Each table in the warehouse has a different ID. The list is given below for reference:
 
 | `tableID`        | Description           |
-| ------------- |:-------------:| 
+| ---------- |-------------:| 
 | customer     | list of all customers with their core information | 
 | dictionary     | Description      | 
 | eligible | Description     | 
