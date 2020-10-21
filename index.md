@@ -45,7 +45,7 @@ In this documentation, we only present the steps to request the API using the Py
 
 Authentication to request the BigQuery API is done via a service account. A service account is a special kind of account used by an application or a virtual machine (VM) instance, not a person. Service accounts are associated with private/public RSA key-pairs that are used for authentication to Google.
 
-In practice, a json file containing the private key of your account service will have been provided to you. Be careful, whoever is in possession of this key is able to request the data from your data warehouse. It is therefore essential that you keep it safe. If there is any doubt about a security breach, please [contact support](support@rubyx.io). We will generate a new key and make the previous one invalid.
+In practice, a json file containing the private key of your account service will have been provided to you. Be careful, whoever is in possession of this key is able to request the data from your data warehouse. It is therefore essential that you keep it safe. If there is any doubt about a security breach, please [contact support](mailto:support@rubyx.io). We will generate a new key and make the previous one invalid.
 
 Note that this service account only has permission to request `dwh` tables in your project. It does not have access to any other tables in any other projects and can only read data, not write.
 
@@ -175,4 +175,4 @@ Link to spreadsheet.
 
 ### Support
 
-Having trouble with using the API? [Contact support](support@rubyx.io) and we’ll help you sort it out.
+Having trouble with using the API? [Contact support](mailto:support@rubyx.io) and we’ll help you sort it out.
