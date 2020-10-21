@@ -158,7 +158,11 @@ if __name__ == "__main__":
 ```
 
 ### Data model
-Get table schema
+
+The data model, including the name of the variables for each table in the warehouse, their description and standard values is available [here](link to spreadsheet).
+
+
+<!--- Get table schema
 
 https://googleapis.dev/python/bigquery/latest/reference.html#table
 
@@ -171,7 +175,7 @@ table_scheme = client.table.Table(table_ref[, schema])
 curl --location --request GET 'https://bigquery.googleapis.com/bigquery/v2/projects/[projectID]/datasets/dwh/tables/loan' \
 --header 'Authorization: Bearer [BEARER TOKEN]'
 ```
-Link to spreadsheet.
+ -->
 
 ### Support
 
