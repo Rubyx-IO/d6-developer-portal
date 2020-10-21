@@ -39,7 +39,7 @@ While you can use Google Cloud APIs by making direct HTTP requests to the server
 
 Note that it is still possible to request the API through other languages for which ad hoc packages are available, e.g. [bigQueryR](https://code.markedmondson.me/bigQueryR/) or [bigrquery](https://bigrquery.r-dbi.org/) for `R`. 
 
-In this documentation, we only present the steps to request the API using the Python Client. But tutorials for other languages are available [here](https://cloud.google.com/bigquery/docs/quickstarts/quickstart-client-libraries#client-libraries-install-python).
+In this documentation, we only present the steps to request the API using the Python Client (full Reference API for Python available [here](https://googleapis.dev/python/bigquery/latest/reference.html)). But tutorials for other languages are available [here](https://cloud.google.com/bigquery/docs/quickstarts/quickstart-client-libraries#client-libraries-install-python).
 
 #### Authentication
 
