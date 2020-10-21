@@ -159,7 +159,7 @@ if __name__ == "__main__":
 
 ### Data model
 
-The data model, including the name of the variables for each table in the warehouse, their description and standard values is available [here](link to spreadsheet).
+The data model, including the name of the variables for each table in the warehouse, their description and standard values is available [here](https://docs.google.com/spreadsheets/d/1xF58QDPaE-rKDAicDCf12dMqi8x1RhhGAItdx7Nk_QA/edit?usp=sharing).
 
 You can also query the schema of a table directly from the API as follows:
 
