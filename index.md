@@ -161,16 +161,28 @@ if __name__ == "__main__":
 
 The data model, including the name of the variables for each table in the warehouse, their description and standard values is available [here](link to spreadsheet).
 
+You can also query the schema of a table directly from the API as follows:
+
+```python
+from google.cloud import bigquery
+
+def table_schema():
+    client = bigquery.Client('projectID')
+    table_ref = client.dataset('dwh').table('schedule')
+    table = client.get_table(table_ref)
+
+    result = ["{0}: {1}".format(schema.name,schema.field_type) for schema in table.schema]
+    print(result)
+
+if __name__ == "__main__":
+    table_schema()
+```    
+Table schema supply column's name and datatype and optionaly column's description and mode (specifying if NULL values are allowed or not).
 
 <!--- Get table schema
 
 https://googleapis.dev/python/bigquery/latest/reference.html#table
 
-```python
-client = bigquery.Client()
-table_scheme = client.table.Table(table_ref[, schema])
-
-```    
 ```
 curl --location --request GET 'https://bigquery.googleapis.com/bigquery/v2/projects/[projectID]/datasets/dwh/tables/loan' \
 --header 'Authorization: Bearer [BEARER TOKEN]'
