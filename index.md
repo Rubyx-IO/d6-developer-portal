@@ -14,18 +14,27 @@ Your `projectID` will have been provided to you directly and usually corresponds
 
 | `tableID`        | Description           |
 | ---------- |-------------:| 
-| customer     | list of all customers with their core information | 
-| dictionary     | Description      | 
-| eligible | Description     | 
-| event | Description      | 
-| hierarchy  | Description     | 
-| loan  | Description      | 
-| loan_application_core  | Description     | 
-| loan_balance | Description     | 
-| objective | Description     | 
-| schedule |  schedules related to a payment of any kind, including its modification (reschedules)      | 
-| scoring | Description     | 
-| WAD | Description     | 
+| account     | accounts or wallets with their core information      | 
+| account_activity_summary | activity of a customer on an account or a wallet on a daily basis     | 
+| account_balance | daily evolution of the saving balance of a customer on an account or a wallet     | 
+| agent |  new agents created and relevant modified information about existing agents   | 
+| customer     | customers with their core information | 
+| dictionary | decodification of codified field     | 
+| eligible | customer eligibles to some offers proposed by Rubyx algorithms     | 
+| event  | events related to a payment of any kind     | 
+| guarentee | guarantees with their core information    | 
+| loan |  loans with their core information      |
+| loan_application_accessory |  accessory information for loan applications     | 
+| loan_application_core | core information of loan application     | 
+| loan_balance  | daily evoluition of the end-of-day balances of loans by component (capital, interest, penalties..)     | 
+| optout_history | optout changes     | 
+| portfolio_manager |  new portfolio managers created and relevant modified information about existing PMs     | 
+| relationship | relationships existing between customers     | 
+| schedule  | schedules related to a payment of any kind, including its modification (reschedules)      | 
+| scoring | recommendations to any offers proposed by Rubyx algorithms     | 
+| transaction | specific transactions with the exact date and time of their occurrence     | 
+| wad | WAD of instalments     | 
+| written_off | written off loans and its recoveries     | 
 
 For example to query the loan table, you should use the id `projectID.dwh.loan`.
 
