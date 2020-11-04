@@ -84,7 +84,7 @@ To make HTTP requests, you will need a bearer token for authentication which can
 gcloud auth application-default print-access-token
 ```
 
-* Authentication with python
+*Authentication with python*
 
 ```python
 from google.cloud import bigquery
@@ -158,7 +158,7 @@ for row in results:
 ```
 
 #### Complete source code
-Here is the complete source code for the sample with auhentication. Replace `projectID` with the ID of your project to be able to test the function.
+Here is the complete source code for the sample with authentication. Replace `projectID` with the ID of your project to be able to test the function.
 
 ```python
 from google.cloud import bigquery
