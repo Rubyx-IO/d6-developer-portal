@@ -154,7 +154,7 @@ results = query_job.result()  # Waits for job to complete.
 
 ```python
 for row in results:
-    print("{} : {} views".format(row.Customer_ID, row.Amount_Due))
+    print("{} : {}".format(row.Customer_ID, row.Amount_Due))
 ```
 
 #### Complete source code
@@ -186,7 +186,7 @@ def query_d6_dwh():
     results = query_job.result()  # Waits for job to complete.
 
     for row in results:
-        print("{} : {} views".format(row.Customer_ID, row.Amount_Due))
+        print("{} : {}".format(row.Customer_ID, row.Amount_Due))
 
 if __name__ == "__main__":
     query_d6_dwh()
