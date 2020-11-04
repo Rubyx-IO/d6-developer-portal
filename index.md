@@ -84,6 +84,23 @@ To make HTTP requests, you will need a bearer token for authentication which can
 gcloud auth application-default print-access-token
 ```
 
+* Authntication with python
+
+```python
+from google.cloud import bigquery
+from google.oauth2 import service_account
+
+# TODO(developer): Set key_path to the path to the service account key
+#                  file.
+# key_path = "path/to/service_account.json"
+
+credentials = service_account.Credentials.from_service_account_file(
+    key_path, scopes=["https://www.googleapis.com/auth/cloud-platform"],
+)
+
+client = bigquery.Client(credentials=credentials, project=credentials.project_id)
+```
+
 #### Setup client libraries
 
 *Install the client library*
@@ -141,13 +158,22 @@ for row in results:
 ```
 
 #### Complete source code
-Here is the complete source code for the sample. Replace `projectID` with the ID of your project to be able to test the function.
+Here is the complete source code for the sample with auhentication. Replace `projectID` with the ID of your project to be able to test the function.
 
 ```python
 from google.cloud import bigquery
+from google.oauth2 import service_account
+
+# TODO(developer): Set key_path to the path to the service account key
+#                  file.
+# key_path = "path/to/service_account.json"
+
+credentials = service_account.Credentials.from_service_account_file(
+    key_path, scopes=["https://www.googleapis.com/auth/cloud-platform"],
+)
 
 def query_d6_dwh():
-    client = bigquery.Client()
+    client = bigquery.Client(credentials=credentials, project=credentials.project_id)
     query_job = client.query(
         """
         SELECT Customer_ID, Amount_Due 
